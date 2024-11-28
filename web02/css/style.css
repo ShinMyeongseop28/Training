@@ -163,10 +163,10 @@ background: url(../img/icon.png) no-repeat 0 -600px;}
 
 /* 탭 메뉴 */
 .tab-menu {position: relative; border: 1px solid #ccc; padding: 8px; height: 105px;}
-.tab-menu ul {overflow: hidden; border-bottom: 1px solid #ccc;}
-.tab-menu ul li {float: left; border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px;}
-.tab-menu ul li a {padding: 5px 10px; display: block;}
-.tab-menu ul li ul {position: absolute; left: 0; top: 48px; width: 270px; border: 0;}
+.tab-menu ul {display: flex; border-bottom: 1px solid #ccc;}
+.tab-menu ul li {flex: 1; border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px;}
+.tab-menu ul li a {padding: 5px 10px; display: block; text-align: center;}
+.tab-menu ul li ul {position: absolute; left: 0; top: 48px; width: 270px; border: 0; display: block;}
 .tab-menu ul li ul li {float: none; border: 0; background: url(../img/dot.gif) no-repeat 9px 8px; padding-left: 18px;}
 .tab-menu ul li ul li a {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; padding: 0 0 3px 0;}
 .tab-menu ul li.active {background: #2c94c4;}

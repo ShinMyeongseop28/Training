@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $('.btn').on('click', function () {
+          // $('.ani_box').animate(
+          //   {
+          //     width: 'toggle',
+          //     // top: '100px',
+          //     // left: '100px',
+          //     // width: '+=50px', width: 'toggle',
+          //     // height: '-=50px',
+          //     // 'font-size': '2rem',
+          //     // padding: '20px',
+          //     // margin: '100px',
+          //     // opacity: '0.5',
+          //   },
+          //   500,
+          //   function () {
+          //     // $(this).css('background-color', 'red');
+          //   }
+          // );
+          $('.ani_box').animate({ width: '200px' }, 'slow');
+          $('.ani_box').animate({ height: '200px' }, 'slow');
+
+          $('.ani_box1').animate({ width: '200px' }, 'slow');
+          $('.ani_box1').animate({ height: '50px' }, 'slow');
+          // queue 선입선출 first in first out FIFO
+        });
+      });
+    </script>
+    <style>
+      body {
+        margin: 0;
+      }
+      div.ani_box {
+        width: 100px;
+        height: 100px;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+        background-color: yellowgreen;
+        position: absolute;
+      }
+      div.ani_box1 {
+        width: 100px;
+        height: 100px;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+        left: 300px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">클릭</button>
+    <div class="ani_box">Font</div>
+    <div class="ani_box1">Font</div>
+  </body>
+</html>

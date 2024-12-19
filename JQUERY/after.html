@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $('#btn').on('click', function () {
+          // $('#img1').before('<img src="img/tomatoes.jpg">');
+          // $('#img1').after('<img src="img/blueberry.jpg">');
+
+          // 제이쿼리 방식
+          const img = $('<img></img>').attr('src', 'img/tomatoes.jpg');
+
+          // 순수 자바스크립트 방식
+          // const img = document.createElement('img');
+          // img.setAttribute('src', 'img/tomatoes.jpg');
+
+          $('#img1') // 체이닝으로 표현하기
+            .before(img)
+            // .before('<img src="img/tomatoes.jpg">')
+            .after('<img src="img/blueberry.jpg">');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">클릭</button>
+    <img src="img/apple.jpg" id="img1" />
+  </body>
+</html>

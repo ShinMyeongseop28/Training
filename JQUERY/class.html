@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .blue {
+        background-color: blue;
+      }
+      .color {
+        color: white;
+      }
+    </style>
+    <script>
+      $(function () {
+        $('#btn').on('click', function () {
+          $('#target').addClass('blue color');
+        });
+        $('#btn1').on('click', function () {
+          $('#target').removeClass('blue color');
+        });
+        $('#btn2').on('click', function () {
+          $('#target').toggleClass('blue');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">add클릭</button>
+    <button id="btn1">remove클릭</button>
+    <button id="btn2">toggle클릭</button>
+    <p id="target">안녕하세요.</p>
+  </body>
+</html>

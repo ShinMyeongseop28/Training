@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      div * {
+        border: 2px solid gray;
+        display: block;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+    <script>
+      $(function () {
+        $('#btn').on('click', function () {
+          // $('div').children('p.na').css({ border: '2px solid red' });
+          $('div').find('.sp').css({ border: '2px solid red' });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">클릭하세요.</button>
+    <div>
+      div
+      <div>div</div>
+      <p>
+        p
+        <span>span</span>
+      </p>
+      <p class="na">p</p>
+      <p>
+        p
+        <span class="sp">span</span>
+      </p>
+      <p>p</p>
+    </div>
+    <p class="sp"></p>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .ancestors * {
+        display: block;
+        border: 5px solid gray;
+        color: gray;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+    <script>
+      $(function () {
+        // $('p').parent().css({
+        //   color: 'blue',
+        //   border: '5px solid hotpink',
+        // });
+
+        $('span.aaa').parents('div').css({
+          color: 'blue',
+          border: '5px solid hotpink',
+        });
+
+        // $('span.aaa').parentsUntil('div.ancestors').css({
+        //   color: 'blue',
+        //   border: '5px solid hotpink',
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="ancestors">
+      ancestors
+      <div>
+        <p><span class="aaa">span</span></p>
+      </div>
+      <p>p</p>
+      <p><span>span</span></p>
+      <p>p</p>
+    </div>
+  </body>
+</html>

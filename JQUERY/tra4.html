@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $('#btn').on('click', function () {
+          // $('p').first().css({ border: '2px solid red' });
+          // $('p').last().css({ border: '2px solid red' });
+          // $('p').eq(2).css({ border: '2px solid red' });
+          // $('p').not('.iam').css({ border: '2px solid red' });
+          $('p')
+            .css({ border: '2px solid red' })
+            .filter('.iam')
+            .css({ 'background-color': 'yellow' });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">클릭해보세요.</button>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+      recusandae ipsam est nostrum, fuga accusantium atque alias rerum ipsa
+      eligendi ullam suscipit id, mollitia, nobis velit quaerat eos voluptate
+      aspernatur.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+      recusandae ipsam est nostrum, fuga accusantium atque alias rerum ipsa
+      eligendi ullam suscipit id, mollitia, nobis velit quaerat eos voluptate
+      aspernatur.
+    </p>
+    <p class="iam">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+      recusandae ipsam est nostrum, fuga accusantium atque alias rerum ipsa
+      eligendi ullam suscipit id, mollitia, nobis velit quaerat eos voluptate
+      aspernatur.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+      recusandae ipsam est nostrum, fuga accusantium atque alias rerum ipsa
+      eligendi ullam suscipit id, mollitia, nobis velit quaerat eos voluptate
+      aspernatur.
+    </p>
+  </body>
+</html>
